@@ -1,38 +1,132 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #000000;
   color: white;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar ul li {
+  padding: 10px 0;
+  cursor: pointer;
+  color:#0ACF83
+}
+
+.sidebar ul li:hover {
+  background-color: #000000;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background-color: #ffffff;
+  color: #0ACF83;
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tabs button:hover {
+  background-color: #0ACF83;
+  
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin-top: 10px;
+}
+.nav-bar-title{
+  margin-bottom: 60px;
+  color: #0ACF83;
+  font-size: 25px;
+  font-weight: 600;
+}
+.nav-bar-sub-title{
+  margin-bottom: 40px;
+  background-color: #0ACF83;
+  font-size: 18px;
+  padding: 8px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center; 
+}
+.right-side {
+  width: 300px;
+  display: flex;
+  justify-content: flex-start; /* Or 'center' to keep it horizontally centered */
+  align-items: flex-start; /* Align to the top */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px; /* Adjusts top margin if needed */
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.search-icon {
+  color: #888;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Optional spacing between cards */
+}
+
+.card {
+  flex: 1 1 45%; /* Adjusts to create 2 cards per row, keeping some flexibility */
+  background-color: #f0f0f0; /* Background color for the card */
+  padding: 12px; /* Padding within the card */
+  border: 1px solid #ccc; /* Border for the card */
+  border-radius: 8px; /* Optional rounded corners */
+}
+.card-title{
+  color: #0ACF83;
+  font-weight: 600;
+}
+
+.article-count {
+  display: flex;
+  align-items: center; /* Center the text and icon vertically */
+  font-size: 16px; /* Font size for article count */
+}
+
+.arrow-icon {
+  margin-left: auto; /* Push the icon to the right side */
+  color: #666; /* Icon color */
 }
