@@ -6,8 +6,10 @@
 .sidebar {
   width: 200px;
   background-color: #000000;
+  position: fixed;
   color: white;
   padding: 10px;
+  height: 100%;
 }
 
 .sidebar ul {
@@ -28,6 +30,7 @@
 .main-content {
   flex: 1;
   padding: 20px;
+  margin-left: 220px;
 }
 
 .tabs {
@@ -129,4 +132,181 @@ p {
 .arrow-icon {
   margin-left: auto; /* Push the icon to the right side */
   color: #666; /* Icon color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.topic-list {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.topic {
+  margin-bottom: 10px;
+}
+
+.topic-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.topic-button:hover {
+  background-color: #e0e0e0;
+}
+
+.topic-content {
+  background-color: #fafafa;
+  padding: 10px 20px;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+  display: block;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pagination {
+  display: flex; /* Ensures children are arranged in a flexible layout */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Aligns items vertically in the middle (if needed) */
+  margin: 20px 0; /* Adds some space above and below the pagination */
+}
+
+.pagination button {
+  background-color: #000000; /* Sets the background color */
+  color: #0ACF83; /* Sets the text color */
+  padding: 10px 20px; /* Provides padding for a better button appearance */
+  border: none; /* Removes default borders */
+  cursor: pointer; /* Changes the cursor to indicate interactivity */
+}
+
+.pagination button:disabled {
+  color: #777777; /* Greyed-out color for disabled buttons */
+  cursor: not-allowed; /* Changes the cursor to indicate it's not clickable */
+}
+
+.pagination span {
+  margin: 0 10px; /* Provides space between buttons and text */
+}
+
+/* General styling for topic list */
+.topic-list {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Topic button with hover and transition effects */
+.topic-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.topic-button:hover {
+  background-color: #e0e0e0;
+  transform: translateX(5px); /* Slight shift to indicate hover */
+}
+
+/* Dropdown content with animation for a smoother experience */
+.topic-content {
+  background-color: #fafafa;
+  padding: 10px 20px;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+  display: none; /* Hide content initially */
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Animation for slide down effect */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for slide up effect (when collapsing) */
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Pagination style for better layout */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #000000;
+  color: #0ACF83;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.pagination button:hover {
+  background-color: #0ACF83;
+  color: #ffffff;
+}
+
+.pagination button:disabled {
+  color: #777777;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
 }
