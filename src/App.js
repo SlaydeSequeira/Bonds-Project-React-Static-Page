@@ -37,19 +37,19 @@ function App() {
 </p>
           </div>
           <div className="card">
-            <p className="card-title">Domain Concepts</p>
+            <p className="card-title">Market Infrastructure</p>
             <p className="description">A short Description Goes Here</p>
             <p className="article-count">6 Articles<FontAwesomeIcon icon={faArrowRight} className="arrow-icon" />
 </p>
           </div>
           <div className="card">
-            <p className="card-title">Domain Concepts</p>
+            <p className="card-title">News Room</p>
             <p className="description">A short Description Goes Here</p>
             <p className="article-count">6 Articles<FontAwesomeIcon icon={faArrowRight} className="arrow-icon" />
 </p>
           </div>
           <div className="card">
-            <p className="card-title">Domain Concepts</p>
+            <p className="card-title">Miscellaneous</p>
             <p className="description">A short Description Goes Here</p>
             <p className="article-count">6 Articles<FontAwesomeIcon icon={faArrowRight} className="arrow-icon" />
 </p>
