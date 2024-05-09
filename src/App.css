@@ -1,312 +1,115 @@
-.App {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 200px;
-  background-color: #000000;
-  position: fixed;
-  color: white;
-  padding: 10px;
-  height: 100%;
-}
-
-.sidebar ul {
-  list-style-type: none;
+/* Global Font Settings */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
   padding: 0;
 }
 
-.sidebar ul li {
-  padding: 10px 0;
-  cursor: pointer;
-  color:#0ACF83
+/* Background Colors */
+body {
+  background-color: #f8f9fa; /* Light gray for a subtle background */
 }
 
-.sidebar ul li:hover {
-  background-color: #000000;
-}
-
-.main-content {
-  flex: 1;
-  padding: 20px;
-  margin-left: 220px;
-}
-
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.tabs button {
-  background-color: #ffffff;
-  color: #0ACF83;
-  border: none;
+/* General Text Styles */
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.tabs button:hover {
-  background-color: #0ACF83;
-  
-}
-
-h1 {
-  margin: 0;
 }
 
 p {
-  margin-top: 10px;
-}
-.nav-bar-title{
-  margin-bottom: 60px;
-  color: #0ACF83;
-  font-size: 25px;
-  font-weight: 600;
-}
-.nav-bar-sub-title{
-  margin-bottom: 40px;
-  background-color: #0ACF83;
-  font-size: 18px;
-  padding: 8px;
-  font-weight: 600;
-  align-items: center;
-  justify-content: center; 
-}
-.right-side {
-  width: 300px;
-  display: flex;
-  justify-content: flex-start; /* Or 'center' to keep it horizontally centered */
-  align-items: flex-start; /* Align to the top */
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 8px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-top: 10px; /* Adjusts top margin if needed */
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: #0d6efd; /* Bootstrap's primary blue color */
 }
 
-.search-input {
-  flex: 1;
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #343a40; /* Dark background for the navbar */
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #adb5bd; /* Light gray on hover */
+}
+
+/* Button Styles */
+.btn {
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
   border: none;
-  outline: none;
-  background: transparent;
-  font-size: 14px;
 }
 
-.search-icon {
-  color: #888;
-}
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px; /* Optional spacing between cards */
+.btn-light {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
 }
 
+/* Modal Styles */
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+/* Card Styles */
 .card {
-  flex: 1 1 45%; /* Adjusts to create 2 cards per row, keeping some flexibility */
-  background-color: #f0f0f0; /* Background color for the card */
-  padding: 12px; /* Padding within the card */
-  border: 1px solid #ccc; /* Border for the card */
-  border-radius: 8px; /* Optional rounded corners */
-}
-.card-title{
-  color: #0ACF83;
-  font-weight: 600;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
 }
 
-.article-count {
-  display: flex;
-  align-items: center; /* Center the text and icon vertically */
-  font-size: 16px; /* Font size for article count */
-}
-
-.arrow-icon {
-  margin-left: auto; /* Push the icon to the right side */
-  color: #666; /* Icon color */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.topic-list {
-  font-family: Arial, sans-serif;
+.card-body {
   padding: 20px;
 }
 
-.topic {
-  margin-bottom: 10px;
+/* Utility Classes for Spacing */
+.my-3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.topic-button {
-  background-color: #f0f0f0;
-  border: none;
-  padding: 10px 20px;
-  text-align: left;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.mt-4 {
+  margin-top: 1.5rem;
 }
 
-.topic-button:hover {
-  background-color: #e0e0e0;
+/* Additional Utility Classes for Alignment */
+.text-center {
+  text-align: center;
 }
 
-.topic-content {
-  background-color: #fafafa;
-  padding: 10px 20px;
-  border: 1px solid #dcdcdc;
-  border-top: none;
-  display: block;
-  animation: slideDown 0.3s ease-in-out;
+.text-start {
+  text-align: start;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+  .navbar {
+    background-color: #495057; /* Dark gray on smaller screens */
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.pagination {
-  display: flex; /* Ensures children are arranged in a flexible layout */
-  justify-content: center; /* Centers items horizontally */
-  align-items: center; /* Aligns items vertically in the middle (if needed) */
-  margin: 20px 0; /* Adds some space above and below the pagination */
-}
-
-.pagination button {
-  background-color: #000000; /* Sets the background color */
-  color: #0ACF83; /* Sets the text color */
-  padding: 10px 20px; /* Provides padding for a better button appearance */
-  border: none; /* Removes default borders */
-  cursor: pointer; /* Changes the cursor to indicate interactivity */
-}
-
-.pagination button:disabled {
-  color: #777777; /* Greyed-out color for disabled buttons */
-  cursor: not-allowed; /* Changes the cursor to indicate it's not clickable */
-}
-
-.pagination span {
-  margin: 0 10px; /* Provides space between buttons and text */
-}
-
-/* General styling for topic list */
-.topic-list {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-/* Topic button with hover and transition effects */
-.topic-button {
-  background-color: #f0f0f0;
-  border: none;
-  padding: 10px 20px;
-  text-align: left;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.topic-button:hover {
-  background-color: #e0e0e0;
-  transform: translateX(5px); /* Slight shift to indicate hover */
-}
-
-/* Dropdown content with animation for a smoother experience */
-.topic-content {
-  background-color: #fafafa;
-  padding: 10px 20px;
-  border: 1px solid #dcdcdc;
-  border-top: none;
-  display: none; /* Hide content initially */
-  animation: slideDown 0.3s ease-in-out;
-}
-
-/* Animation for slide down effect */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animation for slide up effect (when collapsing) */
-@keyframes slideUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-}
-
-/* Pagination style for better layout */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.pagination button {
-  background-color: #000000;
-  color: #0ACF83;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.pagination button:hover {
-  background-color: #0ACF83;
-  color: #ffffff;
-}
-
-.pagination button:disabled {
-  color: #777777;
-  cursor: not-allowed;
-}
-
-.pagination span {
-  margin: 0 10px;
 }
